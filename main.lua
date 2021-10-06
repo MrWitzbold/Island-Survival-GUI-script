@@ -264,7 +264,7 @@ open_close_button.TextWrapped = true
 
 -- Scripts:
 
-local function NLVN_fake_script() -- bypassed_fly.LocalScript 
+local function RAINN_fake_script() -- bypassed_fly.LocalScript 
 	local script = Instance.new('LocalScript', bypassed_fly)
 
 	function remove_fog()
@@ -321,8 +321,8 @@ local function NLVN_fake_script() -- bypassed_fly.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(remove_fog)
 end
-coroutine.wrap(NLVN_fake_script)()
-local function UDGRJD_fake_script() -- btools.LocalScript 
+coroutine.wrap(RAINN_fake_script)()
+local function IWZR_fake_script() -- btools.LocalScript 
 	local script = Instance.new('LocalScript', btools)
 
 	function btools()
@@ -339,8 +339,8 @@ local function UDGRJD_fake_script() -- btools.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(btools)
 end
-coroutine.wrap(UDGRJD_fake_script)()
-local function LWIEECC_fake_script() -- set_speed_button.LocalScript 
+coroutine.wrap(IWZR_fake_script)()
+local function QHBPYR_fake_script() -- set_speed_button.LocalScript 
 	local script = Instance.new('LocalScript', set_speed_button)
 
 	function set_speed()
@@ -350,8 +350,8 @@ local function LWIEECC_fake_script() -- set_speed_button.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(set_speed)
 end
-coroutine.wrap(LWIEECC_fake_script)()
-local function NGNOCCF_fake_script() -- get_tools.LocalScript 
+coroutine.wrap(QHBPYR_fake_script)()
+local function NGXIFAU_fake_script() -- get_tools.LocalScript 
 	local script = Instance.new('LocalScript', get_tools)
 
 	function get_tools()
@@ -373,8 +373,8 @@ local function NGNOCCF_fake_script() -- get_tools.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(get_tools)
 end
-coroutine.wrap(NGNOCCF_fake_script)()
-local function AXVN_fake_script() -- get_morphs.LocalScript 
+coroutine.wrap(NGXIFAU_fake_script)()
+local function LQSI_fake_script() -- get_morphs.LocalScript 
 	local script = Instance.new('LocalScript', get_morphs)
 
 	function get_tools()
@@ -396,8 +396,8 @@ local function AXVN_fake_script() -- get_morphs.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(get_tools)
 end
-coroutine.wrap(AXVN_fake_script)()
-local function EULBDU_fake_script() -- get_foods.LocalScript 
+coroutine.wrap(LQSI_fake_script)()
+local function QOXUPN_fake_script() -- get_foods.LocalScript 
 	local script = Instance.new('LocalScript', get_foods)
 
 	function get_foods()
@@ -436,8 +436,8 @@ local function EULBDU_fake_script() -- get_foods.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(get_foods)
 end
-coroutine.wrap(EULBDU_fake_script)()
-local function QKOMO_fake_script() -- delete_menaces.LocalScript 
+coroutine.wrap(QOXUPN_fake_script)()
+local function OFDML_fake_script() -- delete_menaces.LocalScript 
 	local script = Instance.new('LocalScript', delete_menaces)
 
 	function delete_threats()
@@ -451,8 +451,8 @@ local function QKOMO_fake_script() -- delete_menaces.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(delete_threats)
 end
-coroutine.wrap(QKOMO_fake_script)()
-local function ZNHIY_fake_script() -- delete_laser_doors.LocalScript 
+coroutine.wrap(OFDML_fake_script)()
+local function KWPJZYQ_fake_script() -- delete_laser_doors.LocalScript 
 	local script = Instance.new('LocalScript', delete_laser_doors)
 
 	function delete_laser_doors()
@@ -471,8 +471,8 @@ local function ZNHIY_fake_script() -- delete_laser_doors.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(delete_laser_doors)
 end
-coroutine.wrap(ZNHIY_fake_script)()
-local function MYSZPX_fake_script() -- become_ghost.LocalScript 
+coroutine.wrap(KWPJZYQ_fake_script)()
+local function GRRM_fake_script() -- become_ghost.LocalScript 
 	local script = Instance.new('LocalScript', become_ghost)
 
 	function delete_laser_doors()
@@ -494,8 +494,8 @@ local function MYSZPX_fake_script() -- become_ghost.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(delete_laser_doors)
 end
-coroutine.wrap(MYSZPX_fake_script)()
-local function KQLU_fake_script() -- AFK_farm.LocalScript 
+coroutine.wrap(GRRM_fake_script)()
+local function ABZNN_fake_script() -- AFK_farm.LocalScript 
 	local script = Instance.new('LocalScript', AFK_farm)
 
 	function afk_farm()
@@ -512,6 +512,165 @@ local function KQLU_fake_script() -- AFK_farm.LocalScript
 				v:Remove()
 			end
 		end
+		
+		--Made by N3xul
+		local runDummyScript = function(f,scri)
+			local oldenv = getfenv(f)
+			local newenv = setmetatable({}, {
+				__index = function(_, k)
+					if k:lower() == 'script' then
+						return scri
+					else
+						return oldenv[k]
+					end
+				end
+			})
+			setfenv(f, newenv)
+			ypcall(function() f() end)
+		end
+		cors = {}
+		mas = Instance.new("Model",game:GetService("Lighting")) 
+		mas.Name = "CompiledModel"
+		o1 = Instance.new("ScreenGui")
+		o2 = Instance.new("Frame")
+		o3 = Instance.new("TextButton")
+		o4 = Instance.new("TextButton")
+		o5 = Instance.new("TextLabel")
+		o6 = Instance.new("ImageButton")
+		o7 = Instance.new("LocalScript")
+		o1.Name = "SpectateGui"
+		o1.Parent = mas
+		o2.Name = "Bar"
+		o2.Parent = o1
+		o2.Position = UDim2.new(-1,-100,0.87999999523163,-50)
+		o2.Size = UDim2.new(0,200,0,50)
+		o2.Position = UDim2.new(-1,-100,0.87999999523163,-50)
+		o2.BackgroundColor3 = Color3.new(0, 0, 0)
+		o2.BackgroundTransparency = 0.20000000298023
+		o2.BorderSizePixel = 5
+		o3.Name = "Previous"
+		o3.Parent = o2
+		o3.Size = UDim2.new(0.25,0,1,0)
+		o3.Text = "<"
+		o3.BackgroundColor3 = Color3.new(0.52549, 0.52549, 0.52549)
+		o3.BorderColor3 = Color3.new(0.509804, 0.796079, 1)
+		o3.BorderSizePixel = 0
+		o3.Font = Enum.Font.SourceSans
+		o3.FontSize = Enum.FontSize.Size48
+		o3.TextColor3 = Color3.new(1, 1, 1)
+		o4.Name = "Next"
+		o4.Parent = o2
+		o4.Position = UDim2.new(1,0,0,0)
+		o4.Size = UDim2.new(-0.25,0,1,0)
+		o4.Text = ">"
+		o4.Position = UDim2.new(1,0,0,0)
+		o4.BackgroundColor3 = Color3.new(0.52549, 0.52549, 0.52549)
+		o4.BorderColor3 = Color3.new(0.509804, 0.796079, 1)
+		o4.BorderSizePixel = 0
+		o4.Font = Enum.Font.SourceSans
+		o4.FontSize = Enum.FontSize.Size48
+		o4.TextColor3 = Color3.new(1, 1, 1)
+		o5.Name = "Title"
+		o5.Parent = o2
+		o5.Position = UDim2.new(0.27500000596046,0,0,0)
+		o5.Size = UDim2.new(0.44999998807907,0,1,0)
+		o5.Text = ""
+		o5.Position = UDim2.new(0.27500000596046,0,0,0)
+		o5.BackgroundColor3 = Color3.new(1, 1, 1)
+		o5.BackgroundTransparency = 1
+		o5.Font = Enum.Font.SourceSans
+		o5.FontSize = Enum.FontSize.Size14
+		o5.TextColor3 = Color3.new(1, 1, 1)
+		o5.TextScaled = true
+		o5.TextWrapped = true
+		o6.Name = "Button"
+		o6.Parent = o1
+		o6.Position = UDim2.new(0,0,0.5,-25)
+		o6.Size = UDim2.new(0,50,0,50)
+		o6.Position = UDim2.new(0,0,0.5,-25)
+		o6.BackgroundColor3 = Color3.new(1, 1, 1)
+		o6.BackgroundTransparency = 0.30000001192093
+		o6.BorderSizePixel = 5
+		o6.Image = "http://www.roblox.com/asset/?id=176106970"
+		o7.Parent = o1
+		table.insert(cors,coroutine.create(function()
+			wait()
+			runDummyScript(function()
+				-- By super10099
+	
+				cam = game.Workspace.CurrentCamera
+	
+				local bar = script.Parent.Bar
+				local title = bar.Title
+				local prev = bar.Previous
+				local nex = bar.Next
+				local button = script.Parent.Button
+	
+				function get()
+					for _,v in pairs(game.Players:GetPlayers())do
+						if v.Name == title.Text then
+							return(_)
+						end
+					end
+				end
+	
+	
+				local debounce = false
+				button.MouseButton1Click:connect(function()
+					if debounce == false then debounce = true
+						bar:TweenPosition(UDim2.new(.5,-100,0.88,-50),"In","Linear",1,true)
+						pcall(function()
+							title.Text = game.Players:GetPlayerFromCharacter(cam.CameraSubject.Parent).Name
+						end)
+					elseif debounce == true then debounce = false
+						pcall(function() cam.CameraSubject = game.Players.LocalPlayer.Character.Humanoid end)
+						bar:TweenPosition(UDim2.new(-1,-100,0.88,-50),"In","Linear",1,true)
+					end
+				end)
+	
+				prev.MouseButton1Click:connect(function()
+					wait(.1)
+					local players = game.Players:GetPlayers()
+					local num = get()
+					if not pcall(function() 
+							cam.CameraSubject = players[num-1].Character.Humanoid
+						end) then
+						cam.CameraSubject = players[#players].Character.Humanoid
+					end
+					pcall(function()
+						title.Text = game.Players:GetPlayerFromCharacter(cam.CameraSubject.Parent).Name
+					end)
+				end)
+	
+				nex.MouseButton1Click:connect(function()
+					wait(.1)
+					local players = game.Players:GetPlayers()
+					local num = get()
+					if not pcall(function() 
+							cam.CameraSubject = players[num+1].Character.Humanoid
+						end) then
+						cam.CameraSubject = players[1].Character.Humanoid
+					end
+					pcall(function()
+						title.Text = game.Players:GetPlayerFromCharacter(cam.CameraSubject.Parent).Name
+					end)
+				end)
+	
+	
+			end,o7)
+		end))
+		mas.Parent = workspace
+		mas:MakeJoints()
+		local mas1 = mas:GetChildren()
+		for i=1,#mas1 do
+			mas1[i].Parent = game:GetService("Players").LocalPlayer.PlayerGui 
+			ypcall(function() mas1[i]:MakeJoints() end)
+		end
+		mas:Destroy()
+		for i=1,#cors do
+			coroutine.resume(cors[i])
+		end
+		
 		local vu = game:GetService("VirtualUser")
 		game:GetService("Players").LocalPlayer.Idled:connect(function()
 			vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
@@ -522,8 +681,8 @@ local function KQLU_fake_script() -- AFK_farm.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(afk_farm)
 end
-coroutine.wrap(KQLU_fake_script)()
-local function LBAUJ_fake_script() -- open_close_button.LocalScript 
+coroutine.wrap(ABZNN_fake_script)()
+local function BOHS_fake_script() -- open_close_button.LocalScript 
 	local script = Instance.new('LocalScript', open_close_button)
 
 	function open_close_toggle()
@@ -538,4 +697,4 @@ local function LBAUJ_fake_script() -- open_close_button.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(open_close_toggle)
 end
-coroutine.wrap(LBAUJ_fake_script)()
+coroutine.wrap(BOHS_fake_script)()
