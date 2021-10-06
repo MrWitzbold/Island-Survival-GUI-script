@@ -264,7 +264,7 @@ open_close_button.TextWrapped = true
 
 -- Scripts:
 
-local function ETXM_fake_script() -- bypassed_fly.LocalScript 
+local function NLVN_fake_script() -- bypassed_fly.LocalScript 
 	local script = Instance.new('LocalScript', bypassed_fly)
 
 	function remove_fog()
@@ -321,8 +321,8 @@ local function ETXM_fake_script() -- bypassed_fly.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(remove_fog)
 end
-coroutine.wrap(ETXM_fake_script)()
-local function PTVQU_fake_script() -- btools.LocalScript 
+coroutine.wrap(NLVN_fake_script)()
+local function UDGRJD_fake_script() -- btools.LocalScript 
 	local script = Instance.new('LocalScript', btools)
 
 	function btools()
@@ -339,8 +339,8 @@ local function PTVQU_fake_script() -- btools.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(btools)
 end
-coroutine.wrap(PTVQU_fake_script)()
-local function TQRVXIG_fake_script() -- set_speed_button.LocalScript 
+coroutine.wrap(UDGRJD_fake_script)()
+local function LWIEECC_fake_script() -- set_speed_button.LocalScript 
 	local script = Instance.new('LocalScript', set_speed_button)
 
 	function set_speed()
@@ -350,8 +350,8 @@ local function TQRVXIG_fake_script() -- set_speed_button.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(set_speed)
 end
-coroutine.wrap(TQRVXIG_fake_script)()
-local function WZQKN_fake_script() -- get_tools.LocalScript 
+coroutine.wrap(LWIEECC_fake_script)()
+local function NGNOCCF_fake_script() -- get_tools.LocalScript 
 	local script = Instance.new('LocalScript', get_tools)
 
 	function get_tools()
@@ -373,8 +373,8 @@ local function WZQKN_fake_script() -- get_tools.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(get_tools)
 end
-coroutine.wrap(WZQKN_fake_script)()
-local function WPJT_fake_script() -- get_morphs.LocalScript 
+coroutine.wrap(NGNOCCF_fake_script)()
+local function AXVN_fake_script() -- get_morphs.LocalScript 
 	local script = Instance.new('LocalScript', get_morphs)
 
 	function get_tools()
@@ -396,8 +396,8 @@ local function WPJT_fake_script() -- get_morphs.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(get_tools)
 end
-coroutine.wrap(WPJT_fake_script)()
-local function TBIIIOJ_fake_script() -- get_foods.LocalScript 
+coroutine.wrap(AXVN_fake_script)()
+local function EULBDU_fake_script() -- get_foods.LocalScript 
 	local script = Instance.new('LocalScript', get_foods)
 
 	function get_foods()
@@ -436,8 +436,8 @@ local function TBIIIOJ_fake_script() -- get_foods.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(get_foods)
 end
-coroutine.wrap(TBIIIOJ_fake_script)()
-local function QIGUB_fake_script() -- delete_menaces.LocalScript 
+coroutine.wrap(EULBDU_fake_script)()
+local function QKOMO_fake_script() -- delete_menaces.LocalScript 
 	local script = Instance.new('LocalScript', delete_menaces)
 
 	function delete_threats()
@@ -451,8 +451,8 @@ local function QIGUB_fake_script() -- delete_menaces.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(delete_threats)
 end
-coroutine.wrap(QIGUB_fake_script)()
-local function GRJQGI_fake_script() -- delete_laser_doors.LocalScript 
+coroutine.wrap(QKOMO_fake_script)()
+local function ZNHIY_fake_script() -- delete_laser_doors.LocalScript 
 	local script = Instance.new('LocalScript', delete_laser_doors)
 
 	function delete_laser_doors()
@@ -471,8 +471,8 @@ local function GRJQGI_fake_script() -- delete_laser_doors.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(delete_laser_doors)
 end
-coroutine.wrap(GRJQGI_fake_script)()
-local function NOVG_fake_script() -- become_ghost.LocalScript 
+coroutine.wrap(ZNHIY_fake_script)()
+local function MYSZPX_fake_script() -- become_ghost.LocalScript 
 	local script = Instance.new('LocalScript', become_ghost)
 
 	function delete_laser_doors()
@@ -494,30 +494,36 @@ local function NOVG_fake_script() -- become_ghost.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(delete_laser_doors)
 end
-coroutine.wrap(NOVG_fake_script)()
-local function BYLT_fake_script() -- AFK_farm.LocalScript 
+coroutine.wrap(MYSZPX_fake_script)()
+local function KQLU_fake_script() -- AFK_farm.LocalScript 
 	local script = Instance.new('LocalScript', AFK_farm)
 
 	function afk_farm()
 		game.Players.LocalPlayer.Character:moveTo(Vector3.new(3396.774, -31.8, 177.4))
+		wait(2)
 		for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
 			if v:IsA("Part") then
 				v.Anchored = true
 			end
 		end
-	
 		while true do
 			wait(0)
 			for i,v in pairs(workspace.TempGameProps:GetChildren()) do
 				v:Remove()
 			end
 		end
+		local vu = game:GetService("VirtualUser")
+		game:GetService("Players").LocalPlayer.Idled:connect(function()
+			vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+			wait(1)
+			vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+		end)
 	end
 	
 	script.Parent.MouseButton1Click:Connect(afk_farm)
 end
-coroutine.wrap(BYLT_fake_script)()
-local function JGMQU_fake_script() -- open_close_button.LocalScript 
+coroutine.wrap(KQLU_fake_script)()
+local function LBAUJ_fake_script() -- open_close_button.LocalScript 
 	local script = Instance.new('LocalScript', open_close_button)
 
 	function open_close_toggle()
@@ -532,4 +538,4 @@ local function JGMQU_fake_script() -- open_close_button.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(open_close_toggle)
 end
-coroutine.wrap(JGMQU_fake_script)()
+coroutine.wrap(LBAUJ_fake_script)()
